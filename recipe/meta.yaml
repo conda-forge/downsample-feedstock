@@ -1,5 +1,5 @@
 {% set name = "downsample" %}
-{% set version = "0.0.5" %}
+{% set version = "0.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/downsample-{{ version }}.tar.gz
-  sha256: 14c3783fb18b0c490a2c5874e8e52a1b4a7413a78847af0454294cf0301e7b31
+  sha256: 6ab577d57614d1cf100e904462a87407019b33da581ce0802b7898d2d7247872
 
 build:
   skip: true  # [py<310]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 3
+  number: 0
 
 requirements:
   build:
